@@ -7,7 +7,7 @@ const coreValues = [
   {
     title: 'Equity',
     description:
-      'Every child, regardless of zip code or family income, deserves access to books. We meet students where they are — bringing the book fair to their community.',
+      'Access to education should never be determined by zip code, income, or circumstance. Every element of our events — free books, free meals, free materials — is designed to remove the barriers that keep underserved students from showing up and engaging fully.',
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
         <line x1="12" y1="20" x2="12" y2="10" />
@@ -19,7 +19,7 @@ const coreValues = [
   {
     title: 'Service Learning',
     description:
-      'We engage students not just as recipients of books, but as future organizers, leaders, and advocates for literacy in their own schools and neighborhoods.',
+      'Equal Pages is structured so that everyone who participates gives something — not just receives something. Student Ambassadors are not volunteers executing someone else\'s program; they are civic leaders building their community\'s infrastructure.',
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
         <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
@@ -32,7 +32,7 @@ const coreValues = [
   {
     title: 'Student Autonomy & Access',
     description:
-      'Children choose their own books — always. Research shows that student-selected reading leads to deeper engagement, stronger comprehension, and a lasting love of learning.',
+      'Every student who walks through the door of an Equal Pages event chooses their own books, engages at their own level, and leaves with materials tailored to where they are. Books, meals, and materials are never a barrier.',
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
         <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
@@ -41,9 +41,9 @@ const coreValues = [
     ),
   },
   {
-    title: 'Civic Engagement',
+    title: 'Replication',
     description:
-      'We believe that reading creates citizens. Equal Pages builds awareness around educational equity and inspires community members to take action for the children in their neighborhoods.',
+      'Everything Equal Pages builds — from its playbooks to its partnerships to its Ambassador curriculum — is designed to be transferable, repeatable, and stronger with each iteration.',
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="12" r="10" />
@@ -55,10 +55,10 @@ const coreValues = [
 ]
 
 const crisisStats = [
-  { value: '1 in 6', label: 'U.S. children cannot read proficiently by 3rd grade' },
-  { value: '1 per 300', label: 'Books per child in some low-income communities' },
-  { value: '61%', label: 'Of low-income families own no books at home' },
-  { value: '#1', label: 'Predictor of academic success is access to books' },
+  { value: '69%', label: '4th graders below reading proficient — 2024 NAEP' },
+  { value: '33%', label: '8th graders below basic reading level — 2024 NAEP' },
+  { value: '68%', label: 'Houston 3rd graders not reading on grade level' },
+  { value: '$2.2T', label: 'Annual economic cost of low literacy in the U.S.' },
 ]
 
 // ─── Page ────────────────────────────────────────────────────────────────────
@@ -80,9 +80,8 @@ export default function About() {
               <br />
               child at a time.
             </h1>
-            <p className="text-white/60 text-xl max-w-lg leading-relaxed">
-              Equal Pages is a Houston-based nonprofit founded on a simple belief: every child's
-              story begins with access to books.
+            <p className="text-white/60 text-xl max-w-xl leading-relaxed">
+              Equal Pages is a Houston-based education nonprofit. Our model starts where the access gap is proven to start — with books — and builds outward from there.
             </p>
           </ScrollReveal>
         </div>
@@ -97,13 +96,14 @@ export default function About() {
               The Problem
             </p>
             <h2 className="text-3xl md:text-4xl font-extrabold text-navy tracking-tighter leading-tight mb-6">
-              America has a book
-              poverty crisis.
+              America's literacy
+              crisis cannot wait.
             </h2>
+            <p className="text-gray-600 text-lg leading-relaxed mb-4">
+              According to the 2024 and 2025 National Assessment of Educational Progress, reading scores have dropped to their lowest point in 30 years. The 2025 NAEP results revealed that the gaps between high- and low-performing students reached their widest recorded points in history.
+            </p>
             <p className="text-gray-600 text-lg leading-relaxed">
-              Millions of American children grow up in "book deserts" — homes and communities
-              where books are scarce or nonexistent. The consequences are devastating and
-              lasting. But this crisis is solvable.
+              Houston is an example of the national crisis. As the 4th largest U.S. city with a school system serving over 200,000 students — the vast majority low-income or children of color — HISD is one of the most literacy-challenged urban systems in the country. Equal Pages began here because the need is real, the community is ready, and the model works.
             </p>
           </ScrollReveal>
 
@@ -122,7 +122,7 @@ export default function About() {
 
           <ScrollReveal className="mt-10">
             <p className="text-gray-500 text-sm italic">
-              Sources: Annie E. Casey Foundation, Reach Out and Read, NEA Foundation.
+              Sources: 2024–2025 National Assessment of Educational Progress (NAEP); 2020 Bush Foundation; Houston ISD data.
             </p>
           </ScrollReveal>
         </div>
@@ -153,9 +153,7 @@ export default function About() {
                   Mission
                 </h3>
                 <p className="text-navy text-xl font-semibold leading-snug">
-                  To eliminate book poverty in Houston by connecting students with free,
-                  self-selected books through community book fairs and a growing student
-                  ambassador program.
+                  To improve educational experience in America's most underserved communities by organizing city-partnered Community Book Fairs, empowering Student Ambassadors to replicate education-centered events locally, and building a durable infrastructure of education growth that no single event can provide.
                 </p>
               </div>
             </ScrollReveal>
@@ -174,7 +172,7 @@ export default function About() {
                   Vision
                 </h3>
                 <p className="text-white text-xl font-semibold leading-snug">
-                  A Houston where every child has a bookshelf — and chooses to fill it.
+                  A future where every child in a major American city and rural community — regardless of zip code, income, or parental literacy — has consistent, free access to quality education and a community that celebrates learning.
                 </p>
               </div>
             </ScrollReveal>
@@ -227,7 +225,15 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Community Book Fair — Active */}
             <ScrollReveal delay={0}>
-              <div className="bg-white rounded-2xl p-10 border border-gray-100 h-full">
+              <div className="bg-white rounded-2xl border border-gray-100 h-full overflow-hidden">
+                <div className="h-52 overflow-hidden">
+                  <img
+                    src="/equal-pages/images/kids-activity.jpg"
+                    alt="Children engaged at the Equal Pages book fair activities"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-10">
                 <div className="flex items-center gap-3 mb-6">
                   <span className="bg-brand-green/10 text-brand-green text-xs font-semibold px-3 py-1 rounded-full">
                     Active
@@ -235,13 +241,10 @@ export default function About() {
                 </div>
                 <h3 className="text-2xl font-bold text-navy mb-3">Community Book Fair</h3>
                 <p className="text-gray-600 leading-relaxed mb-4">
-                  Our flagship program. Equal Pages sets up free book fairs in underserved
-                  Houston communities, where children browse and select 3–5 books to take home
-                  at no cost. Every title is age-appropriate and student-chosen.
+                  Our flagship program. An Equal Pages Community Book Fair is a free, city-partnered literacy event that places books directly into the hands of students who need them most. Every book is free, every activity is free, and every element is designed to remove barriers and build genuine excitement around reading.
                 </p>
                 <p className="text-gray-600 leading-relaxed">
-                  Events are open to all families, supported by community volunteers, and
-                  supplemented with local partner organizations providing additional resources.
+                  Students arrive, choose their own books from organized carts, receive a tote bag, and engage in programming — including a Finding Your Voice writing workshop and a Finding Joy in Crafts bookmark activity. The April 11, 2026 inaugural MYC Community Book Fair at the Sunnyside Multi-Service Center served 300+ students and established the proof of concept.
                 </p>
                 <div className="mt-8">
                   <Link
@@ -250,6 +253,7 @@ export default function About() {
                   >
                     See upcoming events →
                   </Link>
+                </div>
                 </div>
               </div>
             </ScrollReveal>
@@ -262,18 +266,15 @@ export default function About() {
                     In Development
                   </span>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-500 mb-3">Student Ambassador Model</h3>
+                <h3 className="text-2xl font-bold text-gray-500 mb-3">Student Ambassador Program</h3>
                 <p className="text-gray-400 leading-relaxed mb-4">
-                  Our next chapter. The Student Ambassador Model will train student leaders —
-                  middle and high schoolers — to organize book drives, host micro-fairs, and
-                  advocate for literacy in their own schools and neighborhoods.
+                  Our expansion engine. Ambassadors are high school juniors through college students — civic leaders selected through a rigorous process, trained by central staff, and empowered to bring the Equal Pages model to cities and communities across the country.
                 </p>
                 <p className="text-gray-400 leading-relaxed">
-                  Ambassadors won't just receive books — they'll become the architects of
-                  literacy access in their communities.
+                  Ambassadors plan and execute at least one Community Book Fair annually in a city with identified need. They don't support Equal Pages-run events — they run their own, built on our model, supported throughout every stage. Official program launch is targeted for early 2027.
                 </p>
                 <div className="mt-8">
-                  <span className="text-gray-400 text-sm font-medium">Coming soon</span>
+                  <span className="text-gray-400 text-sm font-medium">Launching 2027</span>
                 </div>
               </div>
             </ScrollReveal>
@@ -308,25 +309,18 @@ export default function About() {
 
             {/* Bio */}
             <ScrollReveal delay={100} className="md:col-span-2">
-              <h3 className="text-2xl font-bold text-navy mb-1">[ Founder Name ]</h3>
+              <h3 className="text-2xl font-bold text-navy mb-1">Clayton Wellborne</h3>
               <p className="text-brand-green font-medium text-sm mb-6">Founder &amp; Executive Director</p>
 
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  <strong className="text-navy">[ PLACEHOLDER ]</strong> Founded Equal Pages in
-                  Houston, Texas, driven by a firsthand understanding of how book access — or the
-                  lack of it — shapes a child's entire trajectory. Having witnessed students
-                  light up when given the freedom to choose their own books, they built Equal
-                  Pages around a simple but powerful idea: agency in reading changes everything.
+                  Clayton Wellborne is a civic leader from Houston, Texas, serving as District E Representative and City Council Liaison for the Houston Mayor's Youth Council under the City of Houston's Department of Neighborhoods. He is the lead organizer of the inaugural MYC Community Book Fair — the proof of concept for Equal Pages — and has directed a service learning program serving 500+ students.
                 </p>
                 <p>
-                  [ Founder background paragraph — include education, professional experience,
-                  personal connection to the mission, and what drives them to do this work in
-                  Houston specifically. This should be 2–3 sentences. ]
+                  Equal Pages grew directly out of Clayton's work with the Mayor's Youth Council and his firsthand understanding of how book access shapes a child's entire trajectory. Having witnessed students light up when given the freedom to choose their own books, he built Equal Pages around a simple but powerful idea: student agency in reading changes everything.
                 </p>
                 <p>
-                  [ Optional third paragraph about their vision for Equal Pages' future, what they
-                  hope to build, or a personal reflection on the impact they've seen so far. ]
+                  His vision for Equal Pages is a national organization where every community has a civic anchor, a local student leader, and a model that replicates — not because a central office pushed it there, but because the right person from that community built it.
                 </p>
               </div>
 

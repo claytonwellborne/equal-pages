@@ -82,16 +82,26 @@ function PastEventCard({ event, delay }) {
     <ScrollReveal delay={delay}>
       <div className="bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm">
         <div className="md:flex">
-          {/* Image placeholder */}
-          <div className="md:w-56 h-48 md:h-auto bg-navy-light flex items-center justify-center flex-shrink-0">
-            <div className="text-center p-6">
-              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-navy-muted mx-auto mb-2 opacity-40">
-                <rect x="3" y="3" width="18" height="18" rx="2" />
-                <circle cx="8.5" cy="8.5" r="1.5" />
-                <polyline points="21 15 16 10 5 21" />
-              </svg>
-              <span className="text-navy-muted text-xs opacity-40">[ RECAP PHOTO ]</span>
-            </div>
+          {/* Event photo */}
+          <div className="md:w-56 h-48 md:h-auto flex-shrink-0 overflow-hidden">
+            {event.image ? (
+              <img
+                src={event.image}
+                alt={event.title}
+                className="w-full h-full object-cover"
+              />
+            ) : (
+              <div className="w-full h-full bg-navy-light flex items-center justify-center p-6">
+                <div className="text-center">
+                  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-navy-muted mx-auto mb-2 opacity-40">
+                    <rect x="3" y="3" width="18" height="18" rx="2" />
+                    <circle cx="8.5" cy="8.5" r="1.5" />
+                    <polyline points="21 15 16 10 5 21" />
+                  </svg>
+                  <span className="text-navy-muted text-xs opacity-40">[ RECAP PHOTO ]</span>
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Content */}
@@ -121,10 +131,9 @@ function PastEventCard({ event, delay }) {
               </div>
             )}
 
-            <button className="inline-flex items-center gap-2 border border-navy text-navy font-semibold text-sm px-6 py-2.5 rounded-full hover:bg-navy hover:text-white transition-colors">
-              See Recap
-              {/* Note: Connect to a recap page or modal when available */}
-            </button>
+            <a href="#april-2026-gallery" className="inline-flex items-center gap-2 border border-navy text-navy font-semibold text-sm px-6 py-2.5 rounded-full hover:bg-navy hover:text-white transition-colors">
+              See Photos
+            </a>
           </div>
         </div>
       </div>
@@ -207,6 +216,40 @@ export default function Events() {
               <p className="text-gray-400">No past events to show yet.</p>
             </ScrollReveal>
           )}
+        </div>
+      </section>
+
+      {/* ── APRIL 2026 PHOTO GALLERY ─────────────────────────────────────── */}
+      <section id="april-2026-gallery" className="py-24 bg-white">
+        <div className="max-w-6xl mx-auto px-6">
+          <ScrollReveal className="mb-12">
+            <p className="text-brand-green text-sm font-semibold uppercase tracking-widest mb-3">
+              April 11, 2026
+            </p>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-navy tracking-tighter">
+              Event Gallery
+            </h2>
+            <p className="text-gray-500 mt-3 text-lg max-w-xl">
+              A look inside the inaugural MYC Community Book Fair at the Sunnyside Multi-Service Center.
+            </p>
+          </ScrollReveal>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+            {[
+              { src: '/equal-pages/images/event-families.jpg', alt: 'Families at activity tables during the book fair' },
+              { src: '/equal-pages/images/craft-activity.jpg', alt: 'Student doing a craft activity at the book fair' },
+              { src: '/equal-pages/images/girl-craft.jpg', alt: 'Young girl focused on her craft project' },
+              { src: '/equal-pages/images/kids-activity.jpg', alt: 'Children engaged at the activity tables' },
+              { src: '/equal-pages/images/family-crafts.jpg', alt: 'Family participating in craft activities together' },
+              { src: '/equal-pages/images/volunteers-registration.jpg', alt: 'Volunteers at the registration desk welcoming families' },
+            ].map(({ src, alt }, i) => (
+              <ScrollReveal key={src} delay={i * 60}>
+                <div className="aspect-square rounded-xl overflow-hidden">
+                  <img src={src} alt={alt} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
         </div>
       </section>
 

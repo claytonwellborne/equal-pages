@@ -67,10 +67,15 @@ export default function Home() {
     <>
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
       <section className="relative bg-navy min-h-[92vh] flex items-center overflow-hidden">
-        {/* Subtle background texture */}
-        <div className="absolute inset-0 opacity-[0.04]"
-          style={{ backgroundImage: 'radial-gradient(circle at 60% 40%, #2D9B6F 0%, transparent 60%), radial-gradient(circle at 20% 80%, #2D9B6F 0%, transparent 50%)' }}
-        />
+        {/* Hero background photo */}
+        <div className="absolute inset-0">
+          <img
+            src="/equal-pages/images/hero-toddler-book.jpg"
+            alt="A young child holding a book at the Equal Pages Community Book Fair"
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-navy/75" />
+        </div>
 
         <div className="relative max-w-6xl mx-auto px-6 py-28 w-full">
           <div className="max-w-3xl">
@@ -97,7 +102,7 @@ export default function Home() {
 
             {/* Stat callout */}
             <p className="text-white/40 text-sm font-medium mb-8 uppercase tracking-widest">
-              300+ students served · April 11, 2025
+              300+ students served · April 11, 2026
             </p>
 
             {/* CTA */}
@@ -128,13 +133,13 @@ export default function Home() {
               Our First Event. Real Impact.
             </h2>
             <p className="text-gray-500 mt-3 text-lg">
-              April 11, 2025 — inaugural Equal Pages Community Book Fair
+              April 11, 2026 — inaugural MYC Community Book Fair, Sunnyside Houston
             </p>
           </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6">
             <StatCard value="300+" label="Students Served" delay={0} />
-            <StatCard value="900–1,200" label="Books Distributed" delay={80} />
+            <StatCard value="1,000+" label="Books Donated" delay={80} />
             <StatCard value="1" label="Community United" delay={160} />
           </div>
         </div>
@@ -178,16 +183,14 @@ export default function Home() {
               </Link>
             </ScrollReveal>
 
-            {/* Placeholder image */}
+            {/* Event photo */}
             <ScrollReveal delay={120}>
-              <div className="aspect-[4/3] bg-navy-light rounded-2xl flex flex-col items-center justify-center text-navy-muted border border-gray-200">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="mb-3 opacity-40">
-                  <rect x="3" y="3" width="18" height="18" rx="2" />
-                  <circle cx="8.5" cy="8.5" r="1.5" />
-                  <polyline points="21 15 16 10 5 21" />
-                </svg>
-                <span className="text-sm font-medium opacity-50">[ PHOTO PLACEHOLDER ]</span>
-                <span className="text-xs opacity-40 mt-1">Community Book Fair — Houston, TX</span>
+              <div className="aspect-[4/3] rounded-2xl overflow-hidden">
+                <img
+                  src="/equal-pages/images/community-books.jpg"
+                  alt="Community member holding books at the April 2026 Equal Pages Book Fair"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </ScrollReveal>
           </div>
